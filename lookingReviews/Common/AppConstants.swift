@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct AppConstants {
     
@@ -22,4 +23,6 @@ struct AppConstants {
     static let place: String = "tempelhof-2-hour-airport-history-tour-berlin-airlift-more-t23776"
     
     static let hitsPerPage: Int = 10
+    
+    static let navigationBarColor: UIColor = UIColor(red: 232/255, green: 91/255, blue: 34/255, alpha: 1)
 }

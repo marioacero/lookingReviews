@@ -22,6 +22,11 @@
 		DCBBF15D2296D2BD00AE2D4F /* GetReviewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBBF15C2296D2BD00AE2D4F /* GetReviewsUseCase.swift */; };
 		DCBBF15F2296D2CC00AE2D4F /* GetReviewsImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBBF15E2296D2CC00AE2D4F /* GetReviewsImp.swift */; };
 		DCBBF1612296D41100AE2D4F /* ListReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBBF1602296D41100AE2D4F /* ListReviewViewModel.swift */; };
+		DCBBF1652296DC9700AE2D4F /* ListCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBBF1632296DC9700AE2D4F /* ListCustomTableViewCell.swift */; };
+		DCBBF1662296DC9700AE2D4F /* ListCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBBF1642296DC9700AE2D4F /* ListCustomTableViewCell.xib */; };
+		DCBBF1682296E2F300AE2D4F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBBF1672296E2F300AE2D4F /* Extensions.swift */; };
+		DCBBF16F2297949900AE2D4F /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBBF16E2297949900AE2D4F /* LoadingFooterView.swift */; };
+		DCBBF171229794A600AE2D4F /* LoadingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBBF170229794A600AE2D4F /* LoadingFooterView.xib */; };
 		DCE588C322965D610082BF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE588C222965D610082BF54 /* AppDelegate.swift */; };
 		DCE588C522965D610082BF54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE588C422965D610082BF54 /* ViewController.swift */; };
 		DCE588C822965D610082BF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE588C622965D610082BF54 /* Main.storyboard */; };
@@ -62,6 +67,11 @@
 		DCBBF15C2296D2BD00AE2D4F /* GetReviewsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewsUseCase.swift; sourceTree = "<group>"; };
 		DCBBF15E2296D2CC00AE2D4F /* GetReviewsImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewsImp.swift; sourceTree = "<group>"; };
 		DCBBF1602296D41100AE2D4F /* ListReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewViewModel.swift; sourceTree = "<group>"; };
+		DCBBF1632296DC9700AE2D4F /* ListCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomTableViewCell.swift; sourceTree = "<group>"; };
+		DCBBF1642296DC9700AE2D4F /* ListCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCustomTableViewCell.xib; sourceTree = "<group>"; };
+		DCBBF1672296E2F300AE2D4F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DCBBF16E2297949900AE2D4F /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
+		DCBBF170229794A600AE2D4F /* LoadingFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingFooterView.xib; sourceTree = "<group>"; };
 		DCE588BF22965D610082BF54 /* lookingReviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lookingReviews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE588C222965D610082BF54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCE588C422965D610082BF54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DCBBF14D2296613D00AE2D4F /* AppConstants.swift */,
+				DCBBF1672296E2F300AE2D4F /* Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -161,6 +172,24 @@
 				DCBBF15E2296D2CC00AE2D4F /* GetReviewsImp.swift */,
 			);
 			path = GetReviewsUseCase;
+			sourceTree = "<group>";
+		};
+		DCBBF1622296DC7E00AE2D4F /* ListCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				DCBBF1632296DC9700AE2D4F /* ListCustomTableViewCell.swift */,
+				DCBBF1642296DC9700AE2D4F /* ListCustomTableViewCell.xib */,
+			);
+			path = ListCustomCell;
+			sourceTree = "<group>";
+		};
+		DCBBF16D2297936200AE2D4F /* LoadingFooter */ = {
+			isa = PBXGroup;
+			children = (
+				DCBBF16E2297949900AE2D4F /* LoadingFooterView.swift */,
+				DCBBF170229794A600AE2D4F /* LoadingFooterView.xib */,
+			);
+			path = LoadingFooter;
 			sourceTree = "<group>";
 		};
 		DCE588B622965D610082BF54 = {
@@ -238,6 +267,8 @@
 		DCE588E922965E8A0082BF54 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DCBBF16D2297936200AE2D4F /* LoadingFooter */,
+				DCBBF1622296DC7E00AE2D4F /* ListCustomCell */,
 				DCE588C622965D610082BF54 /* Main.storyboard */,
 				DCE588E522965DF20082BF54 /* ListReviewViewController.swift */,
 				DCE588E722965E7D0082BF54 /* FiltersViewController.swift */,
@@ -338,7 +369,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE588CD22965D610082BF54 /* LaunchScreen.storyboard in Resources */,
+				DCBBF171229794A600AE2D4F /* LoadingFooterView.xib in Resources */,
 				DCE588CA22965D610082BF54 /* Assets.xcassets in Resources */,
+				DCBBF1662296DC9700AE2D4F /* ListCustomTableViewCell.xib in Resources */,
 				DCE588C822965D610082BF54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,15 +470,18 @@
 				DCBBF14E2296613D00AE2D4F /* AppConstants.swift in Sources */,
 				DCBBF15D2296D2BD00AE2D4F /* GetReviewsUseCase.swift in Sources */,
 				DCE588C322965D610082BF54 /* AppDelegate.swift in Sources */,
+				DCBBF1682296E2F300AE2D4F /* Extensions.swift in Sources */,
 				DCE588E822965E7D0082BF54 /* FiltersViewController.swift in Sources */,
 				DCBBF1452296608500AE2D4F /* GYGAPI.swift in Sources */,
 				DCBBF14B229660C600AE2D4F /* Mapper.swift in Sources */,
 				DCBBF15F2296D2CC00AE2D4F /* GetReviewsImp.swift in Sources */,
 				DCE588E622965DF20082BF54 /* ListReviewViewController.swift in Sources */,
+				DCBBF1652296DC9700AE2D4F /* ListCustomTableViewCell.swift in Sources */,
 				DCBBF147229660A200AE2D4F /* NetworkProvider.swift in Sources */,
 				DCBBF1552296649D00AE2D4F /* Reviews.swift in Sources */,
 				DCBBF149229660B300AE2D4F /* GenericResponse.swift in Sources */,
 				DCBBF15A2296D29A00AE2D4F /* BaseUseCase.swift in Sources */,
+				DCBBF16F2297949900AE2D4F /* LoadingFooterView.swift in Sources */,
 				DCBBF1532296633900AE2D4F /* TourPlace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

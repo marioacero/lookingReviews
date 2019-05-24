@@ -14,6 +14,12 @@ class ListReviewViewModel {
     var tourPlace: TourPlaceEntity!
     var filters: Filters!
     var currentPage: Int = 0
+    let increasePageConstant: Int = 1
+    var dataSource: [Review] = []
+    
+    // Binding
+    var reloadTableView: (()-> Void)?
+    var isFooterHidden: ((Bool)-> Void)?
     
     init(caseLocator: UseCaseLocator? = nil ) {
         
@@ -36,12 +42,18 @@ class ListReviewViewModel {
             return
         }
         
-        useCase.excute(tourPlace: tourPlace, filters: filters) { (response) in
+        useCase.excute(tourPlace: tourPlace, filters: filters) {[weak self] (response) in
+            guard let strongSelf = self else { return }
+            
             switch response {
             case .success(let reviews):
-                print(reviews)
+                strongSelf.dataSource.append(contentsOf: reviews.data)
+                strongSelf.reloadTableView?()
+                if reviews.totalReviewsComments > (strongSelf.filters.count * strongSelf.filters.page + strongSelf.increasePageConstant) {
+                    strongSelf.filters.page += strongSelf.increasePageConstant
+                }
             case .failure:
-                break
+                strongSelf.isFooterHidden?(true)
             }
         }
     }

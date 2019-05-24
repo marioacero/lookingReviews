@@ -31,6 +31,7 @@ class NetworkProvider: Network {
             case .success(let response):
                 if let reviews: Reviews = self.mapper.mapResponseToReviewsEntity(dataResponse: response.data) {
                     completion(.success(reviews))
+                    return
                 }
                 completion(.failure( AppError(message: AppConstants.Errors.errorMapping)))
             case .failure(let error):
